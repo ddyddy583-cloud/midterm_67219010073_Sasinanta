@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mélancolique Playlist</title>
+    <!-- นำเข้า Google Fonts เพื่อความสวยงาม -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Charm:wght@400;700&family=Anuphan:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- เชื่อมต่อไฟล์ CSS แยก -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= ส่วนแรก (อิงจากภาพ 4122d33697020674537a5e82c28eee96.jpg) ================= -->
+    <header class="navbar">
+        <button class="nav-btn">friends</button>
+        <span class="nav-title">mélancolique</span>
+        <button class="nav-btn">playlist</button>
+    </header>
+
+    <main class="hero-container">
+        <div class="header-titles">
+            <span class="date-tag">40<br>04</span>
+            <h1 class="main-title">THE WAVES<br><span class="subtitle">QUEEN</span></h1>
+            <span class="date-tag">40<br>04</span>
+        </div>
+
+        <div class="profile-section">
+            <div class="avatar"></div>
+            <span class="profile-name">BY ROUSSACEA</span>
+        </div>
+
+        <!-- ส่วนใส่รูปภาพหลักตามที่คุณต้องการ -->
+        <div class="main-image-wrapper">
+            <img src="https: alt="Featured Image" class="featured-image">
+        </div>
+        
+        <p class="credits-text">by roussacea</p>
+    </main>
+
+
+    <!-- ================= ส่วนที่สอง: PLAYLIST (อิงจากภาพ 636a5b619a570cfa293c3f61cb0a2425.jpg) ================= -->
+    <section class="playlist-section">
+        <h2 class="playlist-heading">Playlist</h2>
+        
+        <div class="playlist-grid">
+            <!-- เพลงที่ 1 -->
+            <div class="player-card" data-video-id="gJEoxeWaeMc"> <!-- ใส่ YouTube Video ID ตรงนี้ -->
+                <div class="card-inner">
+                    <div class="song-thumb-container">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Song Title" class="song-thumb">
+                    </div>
+                    <h3 class="song-title">Start of Something New</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                        <div class="progress-dot"></div>
+                    </div>
+                    <div class="controls">
+                        <button class="control-btn prev-btn">⏮</button>
+                        <button class="control-btn play-btn">▶</button>
+                        <button class="control-btn next-btn">⏭</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- เพลงที่ 2 -->
+            <div class="player-card" data-video-id="dQw4w9WgXcQ">
+                <div class="card-inner">
+                    <div class="song-thumb-container">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400" alt="Song Title" class="song-thumb">
+                    </div>
+                    <h3 class="song-title">What I've been looking for</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                        <div class="progress-dot"></div>
+                    </div>
+                    <div class="controls">
+                        <button class="control-btn prev-btn">⏮</button>
+                        <button class="control-btn play-btn">▶</button>
+                        <button class="control-btn next-btn">⏭</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- เพลงที่ 3 -->
+            <div class="player-card" data-video-id="L3wK64rs0cc">
+                <div class="card-inner">
+                    <div class="song-thumb-container">
+                        <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400" alt="Song Title" class="song-thumb">
+                    </div>
+                    <h3 class="song-title">Can I Have This Dance</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                        <div class="progress-dot"></div>
+                    </div>
+                    <div class="controls">
+                        <button class="control-btn prev-btn">⏮</button>
+                        <button class="control-btn play-btn">▶</button>
+                        <button class="control-btn next-btn">⏭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- สำหรับโหลด YouTube Background Player (ซ่อนไว้เล่นแค่เสียง) -->
+    <div id="youtube-audio-player" style="display: none;"></div>
+
+    <!-- เชื่อมต่อไฟล์ JS แยก -->
+    <script src="script.js"></script>
+</body>
+</html>
