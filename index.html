@@ -41,13 +41,15 @@
     </main>
 
     <!-- ================= ส่วนที่สอง: PLAYLIST ================= -->
+<!-- ================= ส่วนที่สอง: PLAYLIST (สไตล์แนวนอนตามรูปภาพตัวอย่าง) ================= -->
     <section class="playlist-section">
         <h2 class="playlist-heading">Playlist</h2>
         
-        <div class="playlist-grid">
+        <div class="playlist-grid horizontal-layout">
             <!-- เพลงที่ 1 -->
-            <div class="player-card" data-video-id="https://youtu.be/xS_E7WzPjvE?si=3e_RJAEwQj_a0DzM">
+            <div class="player-card horizontal-card" data-video-id="https://youtu.be/xS_E7WzPjvE?si=3sMY_ijG9w5nwgv9">
                 <div class="card-inner">
+                    <!-- ฝั่งซ้าย: ตัวเล่นวิดีโอ (YouTube Iframe) -->
                     <div class="song-thumb-container">
                         <iframe 
                             id="yt-player-1"
@@ -60,22 +62,24 @@
                         </iframe>
                     </div>
                     
-                    <h3 class="song-title">Love Me</h3>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar"></div>
-                        <div class="progress-dot"></div>
-                    </div>
-                    <div class="controls">
-                        <button class="control-btn prev-btn">⏮</button>
-                        <button class="control-btn play-btn">▶</button>
-                        <button class="control-btn next-btn">⏭</button>
+                    <!-- ฝั่งขวา: ข้อมูลเพลงและลำดับ -->
+                    <div class="song-info-container">
+                        <div class="song-header">
+                            <span class="song-number">#1</span>
+                        </div>
+                        <h3 class="song-title">Love Me</h3>
+                        <!-- หากต้องการให้ปุ่ม Play/Pause ไปอยู่ฝั่งขวากับชื่อเพลงด้วย -->
+                        <div class="controls">
+                            <button class="control-btn play-btn">▶</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- เพลงที่ 2 -->
-            <div class="player-card" data-video-id="https://youtu.be/7CUz7Ec7cWc?si=UfTj1lG25_fp5Li_">
+            <div class="player-card horizontal-card" data-video-id="https://youtu.be/7CUz7Ec7cWc?si=ok-v6BYCAjcpnJ5u">
                 <div class="card-inner">
+                    <!-- ฝั่งซ้าย: ตัวเล่นวิดีโอ (YouTube Iframe) -->
                     <div class="song-thumb-container">
                         <iframe 
                             id="yt-player-2"
@@ -88,19 +92,19 @@
                         </iframe>
                     </div>
                     
-                    <h3 class="song-title">hate that i made you love me</h3>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar"></div>
-                        <div class="progress-dot"></div>
-                    </div>
-                    <div class="controls">
-                        <button class="control-btn prev-btn">⏮</button>
-                        <button class="control-btn play-btn">▶</button>
-                        <button class="control-btn next-btn">⏭</button>
+                    <!-- ฝั่งขวา: ข้อมูลเพลงและลำดับ -->
+                    <div class="song-info-container">
+                        <div class="song-header">
+                            <span class="song-number">#2</span>
+                        </div>
+                        <h3 class="song-title">hate that i made you love me</h3>
+                        <div class="controls">
+                            <button class="control-btn play-btn">▶</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div> <!-- ปิด playlist-grid ถูกตำแหน่งแล้ว -->
+        </div>
     </section>
 
     <!-- เชื่อมต่อสคริปต์ปกติ -->
