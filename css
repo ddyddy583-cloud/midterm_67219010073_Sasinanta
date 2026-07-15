@@ -1,0 +1,235 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f2ea; /* พื้นหลังสีครีมละมุนแบบในรูป */
+    font-family: 'Anuphan', sans-serif;
+    color: #4a3b32;
+    padding-bottom: 60px;
+}
+
+/* --- ส่วนของหน้าแรก (Navbar & Hero) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e3dac9;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid #7d2222;
+    padding: 6px 20px;
+    border-radius: 20px;
+    color: #7d2222;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav-title {
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    color: #7d2222;
+}
+
+.hero-container {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.header-titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #7d2222;
+    line-height: 1.1;
+}
+
+.main-title .subtitle {
+    font-weight: 700;
+}
+
+.date-tag {
+    font-size: 12px;
+    color: #a69282;
+    line-height: 1.2;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    background-color: #7d2222;
+    border-radius: 55% 45% 55% 45%;
+}
+
+.profile-name {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #a69282;
+}
+
+.main-image-wrapper {
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid #d5c7b3;
+    padding: 10px;
+    background-color: #f7f2ea;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 22px;
+    filter: sepia(10%) contrast(95%);
+}
+
+.credits-text {
+    font-size: 12px;
+    color: #a69282;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+
+/* --- ส่วนของ Playlist (สไตล์เครื่องเล่นเพลงวินเทจ) --- */
+.playlist-section {
+    max-width: 1000px;
+    margin: 60px auto 20px auto;
+    padding: 0 20px;
+}
+
+.playlist-heading {
+    text-align: center;
+    font-family: 'Charm', cursive; /* ฟอนต์สไตล์ลายมือเขียน */
+    font-size: 70px;
+    color: #7d2222;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.player-card {
+    background: transparent;
+    border: 2px solid #7d2222;
+    border-radius: 24px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-inner {
+    text-align: center;
+}
+
+.song-thumb-container {
+    width: 100%;
+    aspect-ratio: 1.1 / 1;
+    overflow: hidden;
+    border: 2px solid #7d2222;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.song-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #7d2222;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* แถบเล่นเพลงตามภาพ */
+.progress-bar-container {
+    width: 85%;
+    height: 3px;
+    background-color: #7d2222;
+    margin: 15px auto;
+    position: relative;
+    border-radius: 2px;
+}
+
+.progress-bar {
+    width: 35%; /* จำลองสถานะปัจจุบัน */
+    height: 100%;
+    background-color: #7d2222;
+}
+
+.progress-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #7d2222;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* ปุ่มควบคุม */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #7d2222;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.control-btn:hover {
+    opacity: 0.7;
+}
+
+.play-btn {
+    font-size: 26px;
+}
