@@ -45,25 +45,34 @@
     <section class="playlist-section">
         <h2 class="playlist-heading">Playlist</h2>
         
-        <div class="playlist-grid">
-            <!-- เพลงที่ 1 -->
-            <div class="player-card" data-video-id="gJEoxeWaeMc"> <!-- ใส่ YouTube Video ID ตรงนี้ -->
-                <div class="card-inner">
-                    <div class="song-thumb-container">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Song Title" class="song-thumb">
-                    </div>
-                    <h3 class="song-title">Start of Something New</h3>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar"></div>
-                        <div class="progress-dot"></div>
-                    </div>
-                    <div class="controls">
-                        <button class="control-btn prev-btn">⏮</button>
-                        <button class="control-btn play-btn">▶</button>
-                        <button class="control-btn next-btn">⏭</button>
-                    </div>
-                </div>
-            </div>
+<!-- เพลงที่ 1 -->
+<div class="player-card" data-video-url="https://youtu.be/5l92ZvLucME?si=jTE264O52jCHfZFq">
+    <div class="card-inner">
+        
+        <!-- ส่วนแสดงวีดิโอฝังจาก YouTube แทนการใช้รูปภาพ -->
+        <div class="song-thumb-container">
+            <iframe 
+                class="youtube-video-frame" 
+                src="" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <h3 class="song-title">ชื่อเพลงของคุณ</h3>
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+            <div class="progress-dot"></div>
+        </div>
+        <div class="controls">
+            <button class="control-btn prev-btn">⏮</button>
+            <button class="control-btn play-btn">▶</button>
+            <button class="control-btn next-btn">⏭</button>
+        </div>
+    </div>
+</div>
 
             <!-- เพลงที่ 2 -->
             <div class="player-card" data-video-id="dQw4w9WgXcQ">
