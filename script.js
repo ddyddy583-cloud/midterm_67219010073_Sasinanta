@@ -1,27 +1,24 @@
-// โหลด YouTube Iframe Player API แบบ Asynchronous
-let tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-let firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+document.addEventListener("DOMContentLoaded", function() {
+    // ฟังก์ชันช่วยดึง Video ID ออกมาจากลิงก์ YouTube รูปแบบต่างๆ
+    function extractVideoId(url) {
+        if (!url) return null;
+        let regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        let match = url.match(regExp);
+        return (match && match[2].length === 11) ? match[2] : null;
+    }
 
-let player;
-let currentPlayingCard = null;
+    // ทำการประมวลผลการ์ดเพลงทุกใบในหน้าเว็บ
+    document.querySelectorAll('.player-card').forEach(card => {
+        const videoUrl = card.getAttribute('data-video-url');
+        const videoId = extractVideoId(videoUrl);
+        const iframe = card.querySelector('.youtube-video-frame');
 
-// ฟังก์ชันนี้จะทำงานอัตโนมัติเมื่อติดตั้ง API เสร็จ
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtube-audio-player', {
-        height: '0',
-        width: '0',
-        videoId: '',
-        playerVars: {
-            'autoplay': 0,
-            'controls': 0
-        },
-        events: {
-            'onStateChange': onPlayerStateChange
+        if (videoId && iframe) {
+            // ทำการแปลงลิงก์ไปเป็นลิงก์สำหรับฝัง (Embed URL) ของ YouTube
+            iframe.src = `https://www.youtube.com/embed/${videoId}`;
         }
     });
-}
+});
 
 // ตรวจจับสถานะการเปลี่ยนตัวเล่น (เช่น จบเพลง)
 function onPlayerStateChange(event) {
