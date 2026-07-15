@@ -38,8 +38,8 @@ body {
 }
 
 .hero-container {
-    max-width: 600px;
-    margin: 40px auto;
+    max-width: 250px;
+    margin: 20px auto;
     text-align: center;
     padding: 0 20px;
 }
@@ -118,33 +118,22 @@ body {
 
 
 /* --- ส่วนของ Playlist (สไตล์เครื่องเล่นเพลงวินเทจ) --- */
-.playlist-section {
-    max-width: 1000px;
-    margin: 60px auto 20px auto;
-    padding: 0 20px;
+/* ส่วนของการ์ดแบบแนวนอน */
+.horizontal-card .card-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.playlist-heading {
-    text-align: center;
-    font-family: 'Charm', cursive; /* ฟอนต์สไตล์ลายมือเขียน */
-    font-size: 70px;
-    color: #7d2222;
-    margin-bottom: 40px;
-    font-weight: 400;
-}
-
-.playlist-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.player-card {
-    background: transparent;
-    border: 2px solid #7d2222;
-    border-radius: 24px;
-    padding: 20px;
-    transition: transform 0.3s ease;
+/* ฝั่งซ้าย: ตัวแสดงวิดีโอ YouTube */
+.horizontal-card .song-thumb-container {
+    flex: 1.5; /* 💡 ปรับสัดส่วนความกว้างตรงนี้ (หากอยากให้วิดีโอใหญ่ขึ้นปรับเป็น 1.8 หรือ 2 | หากอยากให้เล็กลงปรับเป็น 1.2 หรือ 1) */
+    position: relative;
+    aspect-ratio: 16 / 9; /* ล็อคสัดส่วนความกว้างยาวของวิดีโอเป็น 16:9 */
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 15px;
+    max-width: 450px; /* 💡 ล็อคความกว้างสูงสุดของกรอบวิดีโอไม่ให้ใหญ่เกินไป */
 }
 
 .player-card:hover {
